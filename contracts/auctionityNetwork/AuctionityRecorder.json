@@ -1,0 +1,398 @@
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_auctionityAuctionFactoryAddress",
+        "type": "address"
+      }
+    ],
+    "name": "setAuctionityAuctionFactoryAddress",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "auctionityAuctionFactoryAddress",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "name": "tokenHash",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "version",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_tokenHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "_auctionSeller",
+        "type": "address"
+      },
+      {
+        "name": "_tokenContractAddress",
+        "type": "address"
+      },
+      {
+        "name": "_tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "verify",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_tokenHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "_auctionSeller",
+        "type": "address"
+      },
+      {
+        "name": "_tokenContractAddress",
+        "type": "address"
+      },
+      {
+        "name": "_tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "setTokenHashUsed",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_oracle",
+        "type": "address"
+      }
+    ],
+    "name": "setOracle",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "oracle",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_tokenHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "_auctionSeller",
+        "type": "address"
+      },
+      {
+        "name": "_tokenContractAddress",
+        "type": "address"
+      },
+      {
+        "name": "_tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "setTokenHashOk",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_tokenHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getTokenHashState",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_tokenHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "_auctionSeller",
+        "type": "address"
+      },
+      {
+        "name": "_tokenContractAddress",
+        "type": "address"
+      },
+      {
+        "name": "_tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "setTokenHashRefused",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_tokenHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "stateIsOK",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "tokenHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "name": "auctionSeller",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "tokenContractAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogRecorderTokenHashPending",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "tokenHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "name": "auctionSeller",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "tokenContractAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogRecorderTokenHashOk",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "tokenHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "name": "auctionSeller",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "tokenContractAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogRecorderTokenHashUsed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "tokenHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "name": "auctionSeller",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "tokenContractAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogRecorderTokenHashRefused",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "version",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "error",
+        "type": "string"
+      }
+    ],
+    "name": "LogError",
+    "type": "event"
+  }
+]
