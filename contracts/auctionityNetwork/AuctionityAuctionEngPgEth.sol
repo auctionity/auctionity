@@ -832,6 +832,7 @@ contract AuctionityAuctionEngPgEth {
 
         // last bid to end
         _found = false;
+        _bidRewardsLength = bidRewards.length;
         for(_bidRewardsIndex = 0; _bidRewardsIndex < _bidRewardsLength ; _bidRewardsIndex++){
             if(bidRewards[_bidRewardsIndex].sponsor == bidSponsors[_bidSponsorsLength - 1].sponsor){
                 bidRewards[_bidRewardsIndex].timeLeading = bidRewards[_bidRewardsIndex].timeLeading.add(endDate.sub(bidSponsors[_bidSponsorsLength - 1].bidTimestamp));
