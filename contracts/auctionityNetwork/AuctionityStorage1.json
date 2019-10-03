@@ -1,0 +1,822 @@
+{
+  "contractName": "AuctionityStorage1",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "ethereumChainId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "auctionEndVoucherSubmitted",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "auctionEndVoucherList",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "oracle",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "withdrawalVoucherSubmitted",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "auctionityChainId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawalVoucherList",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proxyFallbackContract",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "contractOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50610306806100206000396000f3fe608060405234801561001057600080fd5b50600436106100bb576000357c010000000000000000000000000000000000000000000000000000000090048063966d714811610083578063966d714814610177578063a070981214610194578063abdecf521461019c578063c6afc736146101b9578063ce606ee0146101c1576100bb565b806301890df6146100c05780630b77a715146100de5780635c975abb1461010f578063745ffb41146101175780637dc0d1d014610146575b600080fd5b6100c86101c9565b6040805160ff9092168252519081900360200190f35b6100fb600480360360208110156100f457600080fd5b50356101eb565b604080519115158252519081900360200190f35b6100fb610200565b6101346004803603602081101561012d57600080fd5b5035610221565b60408051918252519081900360200190f35b61014e610240565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b6100fb6004803603602081101561018d57600080fd5b503561025c565b6100c8610271565b610134600480360360208110156101b257600080fd5b5035610294565b61014e6102a2565b61014e6102be565b6003547501000000000000000000000000000000000000000000900460ff1681565b60086020526000908152604090205460ff1681565b60035474010000000000000000000000000000000000000000900460ff1681565b600780548290811061022f57fe5b600091825260209091200154905081565b60035473ffffffffffffffffffffffffffffffffffffffff1681565b60066020526000908152604090205460ff1681565b600354760100000000000000000000000000000000000000000000900460ff1681565b600580548290811061022f57fe5b60015473ffffffffffffffffffffffffffffffffffffffff1681565b60025473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a72305820cf0d4f96e979e86f19944cf7e1836c3520daa3b23d5018fc9553cf53ed82ec860029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100bb576000357c010000000000000000000000000000000000000000000000000000000090048063966d714811610083578063966d714814610177578063a070981214610194578063abdecf521461019c578063c6afc736146101b9578063ce606ee0146101c1576100bb565b806301890df6146100c05780630b77a715146100de5780635c975abb1461010f578063745ffb41146101175780637dc0d1d014610146575b600080fd5b6100c86101c9565b6040805160ff9092168252519081900360200190f35b6100fb600480360360208110156100f457600080fd5b50356101eb565b604080519115158252519081900360200190f35b6100fb610200565b6101346004803603602081101561012d57600080fd5b5035610221565b60408051918252519081900360200190f35b61014e610240565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b6100fb6004803603602081101561018d57600080fd5b503561025c565b6100c8610271565b610134600480360360208110156101b257600080fd5b5035610294565b61014e6102a2565b61014e6102be565b6003547501000000000000000000000000000000000000000000900460ff1681565b60086020526000908152604090205460ff1681565b60035474010000000000000000000000000000000000000000900460ff1681565b600780548290811061022f57fe5b600091825260209091200154905081565b60035473ffffffffffffffffffffffffffffffffffffffff1681565b60066020526000908152604090205460ff1681565b600354760100000000000000000000000000000000000000000000900460ff1681565b600580548290811061022f57fe5b60015473ffffffffffffffffffffffffffffffffffffffff1681565b60025473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a72305820cf0d4f96e979e86f19944cf7e1836c3520daa3b23d5018fc9553cf53ed82ec860029",
+  "sourceMap": "77:558:40:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;77:558:40;;;;;;;",
+  "deployedSourceMap": "77:558:40:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;77:558:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;334:28:9;;;:::i;:::-;;;;;;;;;;;;;;;;;;;526:58:40;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;526:58:40;;:::i;:::-;;;;;;;;;;;;;;;;;;309:18:9;;;:::i;451:38:40:-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;451:38:40;;:::i;:::-;;;;;;;;;;;;;;;;281:21:9;;;:::i;:::-;;;;;;;;;;;;;;;;;;;340:58:40;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;340:58:40;;:::i;368:30:9:-;;;:::i;266:38:40:-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;266:38:40;;:::i;204:36:9:-;;;:::i;247:28::-;;;:::i;334:::-;;;;;;;;;:::o;526:58:40:-;;;;;;;;;;;;;;;:::o;309:18:9:-;;;;;;;;;:::o;451:38:40:-;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;451:38:40;:::o;281:21:9:-;;;;;;:::o;340:58:40:-;;;;;;;;;;;;;;;:::o;368:30:9:-;;;;;;;;;:::o;266:38:40:-;;;;;;;;;;;204:36:9;;;;;;:::o;247:28::-;;;;;;:::o",
+  "source": "pragma solidity ^0.5.4;\n\nimport \"../CommonContract/AuctionityStorage0.sol\";\n\ncontract AuctionityStorage1 is AuctionityStorage0 {\n    // TokenContract => TokenIds => Users => amount\n    mapping(address => mapping(uint256 => mapping(address => uint256))) tokens;\n\n    bytes32[] public withdrawalVoucherList; // List of withdrawal voucher\n    mapping(bytes32 => bool) public withdrawalVoucherSubmitted; // is withdrawal voucher is already submitted\n\n    bytes32[] public auctionEndVoucherList; // List of auction end voucher\n    mapping(bytes32 => bool) public auctionEndVoucherSubmitted; // is auction end voucher is already submitted\n\n}\n",
+  "sourcePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/ethereumLivenet/AuctionityStorage1.sol",
+  "ast": {
+    "absolutePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/ethereumLivenet/AuctionityStorage1.sol",
+    "exportedSymbols": {
+      "AuctionityStorage1": [
+        14439
+      ]
+    },
+    "id": 14440,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14413,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:40"
+      },
+      {
+        "absolutePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/CommonContract/AuctionityStorage0.sol",
+        "file": "../CommonContract/AuctionityStorage0.sol",
+        "id": 14414,
+        "nodeType": "ImportDirective",
+        "scope": 14440,
+        "sourceUnit": 1995,
+        "src": "25:50:40",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 14415,
+              "name": "AuctionityStorage0",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1994,
+              "src": "108:18:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AuctionityStorage0_$1994",
+                "typeString": "contract AuctionityStorage0"
+              }
+            },
+            "id": 14416,
+            "nodeType": "InheritanceSpecifier",
+            "src": "108:18:40"
+          }
+        ],
+        "contractDependencies": [
+          1994
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 14439,
+        "linearizedBaseContracts": [
+          14439,
+          1994
+        ],
+        "name": "AuctionityStorage1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 14424,
+            "name": "tokens",
+            "nodeType": "VariableDeclaration",
+            "scope": 14439,
+            "src": "185:74:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_mapping$_t_address_$_t_uint256_$_$_$",
+              "typeString": "mapping(address => mapping(uint256 => mapping(address => uint256)))"
+            },
+            "typeName": {
+              "id": 14423,
+              "keyType": {
+                "id": 14417,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "193:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "185:67:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_mapping$_t_address_$_t_uint256_$_$_$",
+                "typeString": "mapping(address => mapping(uint256 => mapping(address => uint256)))"
+              },
+              "valueType": {
+                "id": 14422,
+                "keyType": {
+                  "id": 14418,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "212:7:40",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "204:47:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint256_$_t_mapping$_t_address_$_t_uint256_$_$",
+                  "typeString": "mapping(uint256 => mapping(address => uint256))"
+                },
+                "valueType": {
+                  "id": 14421,
+                  "keyType": {
+                    "id": 14419,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "231:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "223:27:40",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                    "typeString": "mapping(address => uint256)"
+                  },
+                  "valueType": {
+                    "id": 14420,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "242:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 14427,
+            "name": "withdrawalVoucherList",
+            "nodeType": "VariableDeclaration",
+            "scope": 14439,
+            "src": "266:38:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+              "typeString": "bytes32[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 14425,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "266:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 14426,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "266:9:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                "typeString": "bytes32[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 14431,
+            "name": "withdrawalVoucherSubmitted",
+            "nodeType": "VariableDeclaration",
+            "scope": 14439,
+            "src": "340:58:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+              "typeString": "mapping(bytes32 => bool)"
+            },
+            "typeName": {
+              "id": 14430,
+              "keyType": {
+                "id": 14428,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "348:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "340:24:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                "typeString": "mapping(bytes32 => bool)"
+              },
+              "valueType": {
+                "id": 14429,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "359:4:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 14434,
+            "name": "auctionEndVoucherList",
+            "nodeType": "VariableDeclaration",
+            "scope": 14439,
+            "src": "451:38:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+              "typeString": "bytes32[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 14432,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "451:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 14433,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "451:9:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                "typeString": "bytes32[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 14438,
+            "name": "auctionEndVoucherSubmitted",
+            "nodeType": "VariableDeclaration",
+            "scope": 14439,
+            "src": "526:58:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+              "typeString": "mapping(bytes32 => bool)"
+            },
+            "typeName": {
+              "id": 14437,
+              "keyType": {
+                "id": 14435,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "534:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "526:24:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                "typeString": "mapping(bytes32 => bool)"
+              },
+              "valueType": {
+                "id": 14436,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "545:4:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 14440,
+        "src": "77:558:40"
+      }
+    ],
+    "src": "0:636:40"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/ethereumLivenet/AuctionityStorage1.sol",
+    "exportedSymbols": {
+      "AuctionityStorage1": [
+        14439
+      ]
+    },
+    "id": 14440,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14413,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:40"
+      },
+      {
+        "absolutePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/CommonContract/AuctionityStorage0.sol",
+        "file": "../CommonContract/AuctionityStorage0.sol",
+        "id": 14414,
+        "nodeType": "ImportDirective",
+        "scope": 14440,
+        "sourceUnit": 1995,
+        "src": "25:50:40",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 14415,
+              "name": "AuctionityStorage0",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1994,
+              "src": "108:18:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AuctionityStorage0_$1994",
+                "typeString": "contract AuctionityStorage0"
+              }
+            },
+            "id": 14416,
+            "nodeType": "InheritanceSpecifier",
+            "src": "108:18:40"
+          }
+        ],
+        "contractDependencies": [
+          1994
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 14439,
+        "linearizedBaseContracts": [
+          14439,
+          1994
+        ],
+        "name": "AuctionityStorage1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 14424,
+            "name": "tokens",
+            "nodeType": "VariableDeclaration",
+            "scope": 14439,
+            "src": "185:74:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_mapping$_t_address_$_t_uint256_$_$_$",
+              "typeString": "mapping(address => mapping(uint256 => mapping(address => uint256)))"
+            },
+            "typeName": {
+              "id": 14423,
+              "keyType": {
+                "id": 14417,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "193:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "185:67:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_mapping$_t_address_$_t_uint256_$_$_$",
+                "typeString": "mapping(address => mapping(uint256 => mapping(address => uint256)))"
+              },
+              "valueType": {
+                "id": 14422,
+                "keyType": {
+                  "id": 14418,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "212:7:40",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "204:47:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint256_$_t_mapping$_t_address_$_t_uint256_$_$",
+                  "typeString": "mapping(uint256 => mapping(address => uint256))"
+                },
+                "valueType": {
+                  "id": 14421,
+                  "keyType": {
+                    "id": 14419,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "231:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "223:27:40",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                    "typeString": "mapping(address => uint256)"
+                  },
+                  "valueType": {
+                    "id": 14420,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "242:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 14427,
+            "name": "withdrawalVoucherList",
+            "nodeType": "VariableDeclaration",
+            "scope": 14439,
+            "src": "266:38:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+              "typeString": "bytes32[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 14425,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "266:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 14426,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "266:9:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                "typeString": "bytes32[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 14431,
+            "name": "withdrawalVoucherSubmitted",
+            "nodeType": "VariableDeclaration",
+            "scope": 14439,
+            "src": "340:58:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+              "typeString": "mapping(bytes32 => bool)"
+            },
+            "typeName": {
+              "id": 14430,
+              "keyType": {
+                "id": 14428,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "348:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "340:24:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                "typeString": "mapping(bytes32 => bool)"
+              },
+              "valueType": {
+                "id": 14429,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "359:4:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 14434,
+            "name": "auctionEndVoucherList",
+            "nodeType": "VariableDeclaration",
+            "scope": 14439,
+            "src": "451:38:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+              "typeString": "bytes32[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 14432,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "451:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 14433,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "451:9:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                "typeString": "bytes32[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 14438,
+            "name": "auctionEndVoucherSubmitted",
+            "nodeType": "VariableDeclaration",
+            "scope": 14439,
+            "src": "526:58:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+              "typeString": "mapping(bytes32 => bool)"
+            },
+            "typeName": {
+              "id": 14437,
+              "keyType": {
+                "id": 14435,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "534:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "526:24:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
+                "typeString": "mapping(bytes32 => bool)"
+              },
+              "valueType": {
+                "id": 14436,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "545:4:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 14440,
+        "src": "77:558:40"
+      }
+    ],
+    "src": "0:636:40"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.4+commit.9549d8ff.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.2",
+  "updatedAt": "2019-09-20T07:24:53.384Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

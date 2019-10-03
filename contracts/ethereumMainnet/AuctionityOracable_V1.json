@@ -1,0 +1,2738 @@
+{
+  "contractName": "AuctionityOracable_V1",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "ethereumChainId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "delegatedSendGetOracle_V1",
+      "outputs": [
+        {
+          "name": "_oracle",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_tokenContractAddress",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "name": "_auctionId",
+          "type": "uint256"
+        },
+        {
+          "name": "_refundUser",
+          "type": "address"
+        }
+      ],
+      "name": "delegatedLockDeposit_V1",
+      "outputs": [
+        {
+          "name": "_success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "oracle",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "auctionityChainId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proxyFallbackContract",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "contractOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "getDelegate_V1",
+      "outputs": [
+        {
+          "name": "_contractDelegate",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "delegatedSendGetPaused_V1",
+      "outputs": [
+        {
+          "name": "_isPaused",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "delegatedSendIsContractOwner_V1",
+      "outputs": [
+        {
+          "name": "_isContractOwner",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOracle",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOracle",
+          "type": "address"
+        }
+      ],
+      "name": "LogOracleTransfered_V1",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "delegatedReceiveGetOracle_V1",
+      "outputs": [
+        {
+          "name": "_oracle",
+          "type": "address"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getOracle_V1",
+      "outputs": [
+        {
+          "name": "_oracle",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOracle_V1",
+      "outputs": [
+        {
+          "name": "_isOracle",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_oracle",
+          "type": "address"
+        }
+      ],
+      "name": "verifyOracle_V1",
+      "outputs": [
+        {
+          "name": "_isOracle",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newOracle",
+          "type": "address"
+        }
+      ],
+      "name": "transferOracle_V1",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b506108dc806100206000396000f3fe608060405260043610610110576000357c0100000000000000000000000000000000000000000000000000000000900480637dc0d1d0116100a7578063ce606ee011610076578063ce606ee0146102c2578063e0237f91146102d7578063f0791d061461030b578063fde2ab801461032057610110565b80637dc0d1d01461027b578063a070981214610290578063b2941039146102a5578063c6afc736146102ad57610110565b80635470fb47116100e35780635470fb47146101cf57806356eed26e146101e45780635c975abb14610233578063740ea7541461024857610110565b806301890df6146101155780630b7338531461014057806311656ca11461016957806337ae1dbc1461019a575b600080fd5b34801561012157600080fd5b5061012a610335565b6040805160ff9092168252519081900360200190f35b34801561014c57600080fd5b50610155610357565b604080519115158252519081900360200190f35b34801561017557600080fd5b5061017e610368565b60408051600160a060020a039092168252519081900360200190f35b3480156101a657600080fd5b506101cd600480360360208110156101bd57600080fd5b5035600160a060020a0316610377565b005b3480156101db57600080fd5b5061017e610406565b3480156101f057600080fd5b50610155600480360360a081101561020757600080fd5b50600160a060020a0381358116916020810135916040820135916060810135916080909101351661047f565b34801561023f57600080fd5b5061015561051a565b34801561025457600080fd5b506101556004803603602081101561026b57600080fd5b5035600160a060020a031661053b565b34801561028757600080fd5b5061017e61054f565b34801561029c57600080fd5b5061012a61055e565b61017e610581565b3480156102b957600080fd5b5061017e610590565b3480156102ce57600080fd5b5061017e61059f565b3480156102e357600080fd5b5061017e600480360360208110156102fa57600080fd5b5035600160e060020a0319166105ae565b34801561031757600080fd5b506101556105d3565b34801561032c57600080fd5b50610155610643565b6003547501000000000000000000000000000000000000000000900460ff1681565b600354600160a060020a0316331490565b600354600160a060020a031690565b61037f610357565b8061038d575061038d610643565b15156103fa57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601660248201527f4973206e6f74204f7261636c65206f72204f776e657200000000000000000000604482015290519081900360640190fd5b6104038161069a565b50565b604080517f64656c656761746564526563656976654765744f7261636c655f5631282900008152815190819003601e0181206004825260248201909252602081018051600160e060020a0316600160e060020a03199093169290921790915260009081908190610476908261077a565b50519250505090565b600080600061050c604051808061087a6037913960408051918290036037018220600160a060020a03808e166024850152604484018d9052606484018c9052608484018b9052891660a4808501919091528251808503909101815260c4909301909152602082018051600160e060020a0316600160e060020a03199092169190911790529050600061077a565b505198975050505050505050565b60035474010000000000000000000000000000000000000000900460ff1681565b600354600160a060020a0390811691161490565b600354600160a060020a031681565b600354760100000000000000000000000000000000000000000000900460ff1681565b600061058b610368565b905090565b600154600160a060020a031681565b600254600160a060020a031681565b600160e060020a031916600090815260208190526040902054600160a060020a031690565b604080517f64656c656761746564526563656976654765745061757365645f5631282900008152815190819003601e0181206004825260248201909252602081018051600160e060020a0316600160e060020a03199093169290921790915260009081908190610476908261077a565b600080600061047660405180806108566024913960408051918290036024908101832060048452908301909152602082018051600160e060020a0316600160e060020a03199092169190911790529050600061077a565b600160a060020a038116151561071157604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601360248201527f4f7261636c652063616e27742062652030783000000000000000000000000000604482015290519081900360640190fd5b600354604051600160a060020a038084169216907f27bc51d62e0b08acc684594edac5a4344d69d9fe336ec5875d0c8992a681718290600090a36003805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b602082015160009081908161078e826105ae565b9050600160a060020a03811615156107a35750835b600160a060020a0381161515610804576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260238152602001806108336023913960400191505060405180910390fd5b600080875160208901845af43d93506040519450836000863e801515610828578385fd5b505050925092905056fe41756374696f6e6974792066756e6374696f6e20646f6573206e6f742065786973742e64656c656761746564526563656976654973436f6e74726163744f776e65725f563128296c6f636b4465706f7369745f563128616464726573732c75696e743235362c75696e743235362c75696e743235362c6164647265737329a165627a7a72305820706578294194aa226af9055d68de4c300f713f0e377ea7ea26233f68b0e54c100029",
+  "deployedBytecode": "0x608060405260043610610110576000357c0100000000000000000000000000000000000000000000000000000000900480637dc0d1d0116100a7578063ce606ee011610076578063ce606ee0146102c2578063e0237f91146102d7578063f0791d061461030b578063fde2ab801461032057610110565b80637dc0d1d01461027b578063a070981214610290578063b2941039146102a5578063c6afc736146102ad57610110565b80635470fb47116100e35780635470fb47146101cf57806356eed26e146101e45780635c975abb14610233578063740ea7541461024857610110565b806301890df6146101155780630b7338531461014057806311656ca11461016957806337ae1dbc1461019a575b600080fd5b34801561012157600080fd5b5061012a610335565b6040805160ff9092168252519081900360200190f35b34801561014c57600080fd5b50610155610357565b604080519115158252519081900360200190f35b34801561017557600080fd5b5061017e610368565b60408051600160a060020a039092168252519081900360200190f35b3480156101a657600080fd5b506101cd600480360360208110156101bd57600080fd5b5035600160a060020a0316610377565b005b3480156101db57600080fd5b5061017e610406565b3480156101f057600080fd5b50610155600480360360a081101561020757600080fd5b50600160a060020a0381358116916020810135916040820135916060810135916080909101351661047f565b34801561023f57600080fd5b5061015561051a565b34801561025457600080fd5b506101556004803603602081101561026b57600080fd5b5035600160a060020a031661053b565b34801561028757600080fd5b5061017e61054f565b34801561029c57600080fd5b5061012a61055e565b61017e610581565b3480156102b957600080fd5b5061017e610590565b3480156102ce57600080fd5b5061017e61059f565b3480156102e357600080fd5b5061017e600480360360208110156102fa57600080fd5b5035600160e060020a0319166105ae565b34801561031757600080fd5b506101556105d3565b34801561032c57600080fd5b50610155610643565b6003547501000000000000000000000000000000000000000000900460ff1681565b600354600160a060020a0316331490565b600354600160a060020a031690565b61037f610357565b8061038d575061038d610643565b15156103fa57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601660248201527f4973206e6f74204f7261636c65206f72204f776e657200000000000000000000604482015290519081900360640190fd5b6104038161069a565b50565b604080517f64656c656761746564526563656976654765744f7261636c655f5631282900008152815190819003601e0181206004825260248201909252602081018051600160e060020a0316600160e060020a03199093169290921790915260009081908190610476908261077a565b50519250505090565b600080600061050c604051808061087a6037913960408051918290036037018220600160a060020a03808e166024850152604484018d9052606484018c9052608484018b9052891660a4808501919091528251808503909101815260c4909301909152602082018051600160e060020a0316600160e060020a03199092169190911790529050600061077a565b505198975050505050505050565b60035474010000000000000000000000000000000000000000900460ff1681565b600354600160a060020a0390811691161490565b600354600160a060020a031681565b600354760100000000000000000000000000000000000000000000900460ff1681565b600061058b610368565b905090565b600154600160a060020a031681565b600254600160a060020a031681565b600160e060020a031916600090815260208190526040902054600160a060020a031690565b604080517f64656c656761746564526563656976654765745061757365645f5631282900008152815190819003601e0181206004825260248201909252602081018051600160e060020a0316600160e060020a03199093169290921790915260009081908190610476908261077a565b600080600061047660405180806108566024913960408051918290036024908101832060048452908301909152602082018051600160e060020a0316600160e060020a03199092169190911790529050600061077a565b600160a060020a038116151561071157604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601360248201527f4f7261636c652063616e27742062652030783000000000000000000000000000604482015290519081900360640190fd5b600354604051600160a060020a038084169216907f27bc51d62e0b08acc684594edac5a4344d69d9fe336ec5875d0c8992a681718290600090a36003805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b602082015160009081908161078e826105ae565b9050600160a060020a03811615156107a35750835b600160a060020a0381161515610804576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260238152602001806108336023913960400191505060405180910390fd5b600080875160208901845af43d93506040519450836000863e801515610828578385fd5b505050925092905056fe41756374696f6e6974792066756e6374696f6e20646f6573206e6f742065786973742e64656c656761746564526563656976654973436f6e74726163744f776e65725f563128296c6f636b4465706f7369745f563128616464726573732c75696e743235362c75696e743235362c75696e743235362c6164647265737329a165627a7a72305820706578294194aa226af9055d68de4c300f713f0e377ea7ea26233f68b0e54c100029",
+  "sourceMap": "96:1889:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;96:1889:4;;;;;;;",
+  "deployedSourceMap": "96:1889:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;334:28:9;;8:9:-1;5:2;;;30:1;27;20:12;5:2;334:28:9;;;:::i;:::-;;;;;;;;;;;;;;;;;;;797:104:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;797:104:4;;;:::i;:::-;;;;;;;;;;;;;;;;;;621:92;;8:9:-1;5:2;;;30:1;27;20:12;5:2;621:92:4;;;:::i;:::-;;;;-1:-1:-1;;;;;621:92:4;;;;;;;;;;;;;;1400:230;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1400:230:4;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1400:230:4;-1:-1:-1;;;;;1400:230:4;;:::i;:::-;;2983:428:3;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2983:428:3;;;:::i;4170:833::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;4170:833:3;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;-1:-1;;;;;;4170:833:3;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;309:18:9:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;309:18:9;;;:::i;1109:148:4:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1109:148:4;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1109:148:4;-1:-1:-1;;;;;1109:148:4;;:::i;281:21:9:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;281:21:9;;;:::i;368:30::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;368:30:9;;;:::i;397:147:4:-;;;:::i;204:36:9:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;204:36:9;;;:::i;247:28::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;247:28:9;;;:::i;313:162:3:-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;313:162:3;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;313:162:3;-1:-1:-1;;;;;;313:162:3;;:::i;3486:430::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3486:430:3;;;:::i;2244:484::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2244:484:3;;;:::i;334:28:9:-;;;;;;;;;:::o;797:104:4:-;888:6;;-1:-1:-1;;;;;888:6:4;874:10;:20;;797:104::o;621:92::-;700:6;;-1:-1:-1;;;;;700:6:4;621:92;:::o;1400:230::-;1485:13;:11;:13::i;:::-;:50;;;;1502:33;:31;:33::i;:::-;1464:119;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1593:30;1612:10;1593:18;:30::i;:::-;1400:230;:::o;2983:428:3:-;3217:43;;;;;;;;;;;;;;;;22:32:-1;6:49;;3170:105:3;;;;;;49:4:-1;25:18;;61:17;;-1:-1;;;;;182:15;-1:-1;;;;;;3170:105:3;;;179:29:-1;;;;160:49;;;3036:15:3;;;;;;3139:170;;3036:15;3139:17;:170::i;:::-;-1:-1:-1;3354:16:3;;-1:-1:-1;;;2983:428:3;:::o;4170:833::-;4372:13;4397:14;4421:15;4473:426;4572:114;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;4504:361:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;26:21:-1;;;22:32;;;6:49;;4504:361:3;;;;;;;;25:18:-1;;61:17;;-1:-1;;;;;182:15;-1:-1;;;;;;4504:361:3;;;179:29:-1;;;;160:49;;4504:361:3;-1:-1:-1;;4473:17:3;:426::i;:::-;-1:-1:-1;4945:16:3;;4170:833;-1:-1:-1;;;;;;;;4170:833:3:o;309:18:9:-;;;;;;;;;:::o;1109:148:4:-;1244:6;;-1:-1:-1;;;;;1244:6:4;;;1233:17;;;;1109:148::o;281:21:9:-;;;-1:-1:-1;;;;;281:21:9;;:::o;368:30::-;;;;;;;;;:::o;397:147:4:-;485:15;523:14;:12;:14::i;:::-;516:21;;397:147;:::o;204:36:9:-;;;-1:-1:-1;;;;;204:36:9;;:::o;247:28::-;;;-1:-1:-1;;;;;247:28:9;;:::o;313:162:3:-;-1:-1:-1;;;;;;448:20:3;400:25;448:20;;;;;;;;;;;-1:-1:-1;;;;;448:20:3;;313:162::o;3486:430::-;3719:43;;;;;;;;;;;;;;;;22:32:-1;6:49;;3672:105:3;;;;;;49:4:-1;25:18;;61:17;;-1:-1;;;;;182:15;-1:-1;;;;;;3672:105:3;;;179:29:-1;;;;160:49;;;3539:14:3;;;;;;3641:170;;3539:14;3641:17;:170::i;2244:484::-;2319:21;2356:14;2380:15;2432:176;2510:49;;;;;;;;;;;;;;;;;;;;;22:32:-1;6:49;;2463:111:3;;;;;;49:4:-1;25:18;;61:17;;-1:-1;;;;;182:15;-1:-1;;;;;;2463:111:3;;;179:29:-1;;;;160:49;;2510::3;-1:-1:-1;26:21;2432:17:3;:176::i;1767:216:4:-;-1:-1:-1;;;;;1842:24:4;;;;1834:56;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1928:6;;1905:42;;-1:-1:-1;;;;;1905:42:4;;;;1928:6;;1905:42;;1928:6;;1905:42;1957:6;:19;;-1:-1:-1;;1957:19:4;-1:-1:-1;;;;;1957:19:4;;;;;;;;;;1767:216::o;778:1382:3:-;1067:4;1052:20;;1046:27;896:14;;;;;1177:25;1046:27;1177:14;:25::i;:::-;1149:53;-1:-1:-1;;;;;;1310:31:3;;;1306:99;;;-1:-1:-1;1377:17:3;1306:99;-1:-1:-1;;;;;1436:31:3;;;;1415:113;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1826:1;1807;1779:9;1773:16;1750:4;1739:9;1735:20;1700:17;1679:3;1649:192;1868:14;1854:28;;1914:4;1908:11;1895:24;;1961:10;1958:1;1947:9;1932:40;1988:13;;1985:2;;;2038:10;2027:9;2020:29;1985:2;-1:-1:-1;;;778:1382:3;;;;;:::o",
+  "source": "pragma solidity ^0.5.4;\n\nimport \"./AuctionityLibrary_V1.sol\";\n\n/// @title AuctionityOracable_V1\ncontract AuctionityOracable_V1 is AuctionityLibrary_V1 {\n    /// @notice event LogOracleTransfered_V1\n    event LogOracleTransfered_V1(\n        address indexed previousOracle,\n        address indexed newOracle\n    );\n\n    /// @notice delegate receive of getOracle\n    /// @return  _oracle address\n    function delegatedReceiveGetOracle_V1()\n        public\n        payable\n        returns (address _oracle)\n    {\n        return getOracle_V1();\n    }\n\n    /// @notice getter oracle address\n    /// @return  _oracle address\n    function getOracle_V1() public view returns (address _oracle) {\n        return oracle;\n    }\n\n    /// @notice verify if msg.sender is oracle\n    /// @return _isOracle bool\n    function isOracle_V1() public view returns (bool _isOracle) {\n        return msg.sender == oracle;\n    }\n\n    /**\n     * @return true if `_oracle` is the oracle of the contract.\n     */\n\n    /// @notice verify oracle address\n    /// @param _oracle address : address to compare\n    /// @return _isOracle bool\n    function verifyOracle_V1(address _oracle)\n        public\n        view\n        returns (bool _isOracle)\n    {\n        return _oracle == oracle;\n    }\n\n    /// @notice Allows the current oracle or owner to set a new oracle.\n    /// @param _newOracle The address to transfer oracleship to.\n    function transferOracle_V1(address _newOracle) public {\n        require(\n            isOracle_V1() || delegatedSendIsContractOwner_V1(),\n            \"Is not Oracle or Owner\"\n        );\n        _transferOracle_V1(_newOracle);\n    }\n\n    /// @notice Transfers control of the contract to a newOracle.\n    /// @param _newOracle The address to transfer oracleship to.\n    function _transferOracle_V1(address _newOracle) internal {\n        require(_newOracle != address(0), \"Oracle can't be 0x0\");\n        emit LogOracleTransfered_V1(oracle, _newOracle);\n        oracle = _newOracle;\n    }\n}\n",
+  "sourcePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/CommonContract/AuctionityOracable_V1.sol",
+  "ast": {
+    "absolutePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/CommonContract/AuctionityOracable_V1.sol",
+    "exportedSymbols": {
+      "AuctionityOracable_V1": [
+        1357
+      ]
+    },
+    "id": 1358,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1264,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "absolutePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/CommonContract/AuctionityLibrary_V1.sol",
+        "file": "./AuctionityLibrary_V1.sol",
+        "id": 1265,
+        "nodeType": "ImportDirective",
+        "scope": 1358,
+        "sourceUnit": 1263,
+        "src": "25:36:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1266,
+              "name": "AuctionityLibrary_V1",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1262,
+              "src": "130:20:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AuctionityLibrary_V1_$1262",
+                "typeString": "contract AuctionityLibrary_V1"
+              }
+            },
+            "id": 1267,
+            "nodeType": "InheritanceSpecifier",
+            "src": "130:20:4"
+          }
+        ],
+        "contractDependencies": [
+          1262,
+          1994
+        ],
+        "contractKind": "contract",
+        "documentation": "@title AuctionityOracable_V1",
+        "fullyImplemented": true,
+        "id": 1357,
+        "linearizedBaseContracts": [
+          1357,
+          1262,
+          1994
+        ],
+        "name": "AuctionityOracable_V1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": "@notice event LogOracleTransfered_V1",
+            "id": 1273,
+            "name": "LogOracleTransfered_V1",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1272,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1269,
+                  "indexed": true,
+                  "name": "previousOracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1273,
+                  "src": "240:30:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1268,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "240:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1271,
+                  "indexed": true,
+                  "name": "newOracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1273,
+                  "src": "280:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1270,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "280:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "230:81:4"
+            },
+            "src": "202:110:4"
+          },
+          {
+            "body": {
+              "id": 1281,
+              "nodeType": "Block",
+              "src": "506:38:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 1278,
+                      "name": "getOracle_V1",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1290,
+                      "src": "523:12:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
+                        "typeString": "function () view returns (address)"
+                      }
+                    },
+                    "id": 1279,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "523:14:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 1277,
+                  "id": 1280,
+                  "nodeType": "Return",
+                  "src": "516:21:4"
+                }
+              ]
+            },
+            "documentation": "@notice delegate receive of getOracle\n @return  _oracle address",
+            "id": 1282,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "delegatedReceiveGetOracle_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1274,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "434:2:4"
+            },
+            "returnParameters": {
+              "id": 1277,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1276,
+                  "name": "_oracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1282,
+                  "src": "485:15:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1275,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "485:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "484:17:4"
+            },
+            "scope": 1357,
+            "src": "397:147:4",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1289,
+              "nodeType": "Block",
+              "src": "683:30:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1287,
+                    "name": "oracle",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1987,
+                    "src": "700:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 1286,
+                  "id": 1288,
+                  "nodeType": "Return",
+                  "src": "693:13:4"
+                }
+              ]
+            },
+            "documentation": "@notice getter oracle address\n @return  _oracle address",
+            "id": 1290,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getOracle_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1283,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "642:2:4"
+            },
+            "returnParameters": {
+              "id": 1286,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1285,
+                  "name": "_oracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1290,
+                  "src": "666:15:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1284,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "666:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "665:17:4"
+            },
+            "scope": 1357,
+            "src": "621:92:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1300,
+              "nodeType": "Block",
+              "src": "857:44:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 1298,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1295,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14595,
+                        "src": "874:3:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 1296,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "874:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 1297,
+                      "name": "oracle",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1987,
+                      "src": "888:6:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "874:20:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 1294,
+                  "id": 1299,
+                  "nodeType": "Return",
+                  "src": "867:27:4"
+                }
+              ]
+            },
+            "documentation": "@notice verify if msg.sender is oracle\n @return _isOracle bool",
+            "id": 1301,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isOracle_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1291,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "817:2:4"
+            },
+            "returnParameters": {
+              "id": 1294,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1293,
+                  "name": "_isOracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1301,
+                  "src": "841:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1292,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "841:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "840:16:4"
+            },
+            "scope": 1357,
+            "src": "797:104:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1312,
+              "nodeType": "Block",
+              "src": "1216:41:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 1310,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 1308,
+                      "name": "_oracle",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1303,
+                      "src": "1233:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 1309,
+                      "name": "oracle",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1987,
+                      "src": "1244:6:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1233:17:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 1307,
+                  "id": 1311,
+                  "nodeType": "Return",
+                  "src": "1226:24:4"
+                }
+              ]
+            },
+            "documentation": "@notice verify oracle address\n @param _oracle address : address to compare\n @return _isOracle bool",
+            "id": 1313,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verifyOracle_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1304,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1303,
+                  "name": "_oracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1313,
+                  "src": "1134:15:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1302,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1134:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1133:17:4"
+            },
+            "returnParameters": {
+              "id": 1307,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1306,
+                  "name": "_isOracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1313,
+                  "src": "1196:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1305,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1196:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1195:16:4"
+            },
+            "scope": 1357,
+            "src": "1109:148:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1331,
+              "nodeType": "Block",
+              "src": "1454:176:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 1323,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "id": 1319,
+                            "name": "isOracle_V1",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1301,
+                            "src": "1485:11:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
+                              "typeString": "function () view returns (bool)"
+                            }
+                          },
+                          "id": 1320,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1485:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "||",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "id": 1321,
+                            "name": "delegatedSendIsContractOwner_V1",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1067,
+                            "src": "1502:31:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_nonpayable$__$returns$_t_bool_$",
+                              "typeString": "function () returns (bool)"
+                            }
+                          },
+                          "id": 1322,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1502:33:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "src": "1485:50:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4973206e6f74204f7261636c65206f72204f776e6572",
+                        "id": 1324,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1549:24:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_137beaf9e5c095cff6e689455b8b0772fd2d0fff744de01842e3ee72f1558558",
+                          "typeString": "literal_string \"Is not Oracle or Owner\""
+                        },
+                        "value": "Is not Oracle or Owner"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_137beaf9e5c095cff6e689455b8b0772fd2d0fff744de01842e3ee72f1558558",
+                          "typeString": "literal_string \"Is not Oracle or Owner\""
+                        }
+                      ],
+                      "id": 1318,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        14598,
+                        14599
+                      ],
+                      "referencedDeclaration": 14599,
+                      "src": "1464:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 1325,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1464:119:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1326,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1464:119:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1328,
+                        "name": "_newOracle",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1315,
+                        "src": "1612:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1327,
+                      "name": "_transferOracle_V1",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1356,
+                      "src": "1593:18:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 1329,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1593:30:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1330,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1593:30:4"
+                }
+              ]
+            },
+            "documentation": "@notice Allows the current oracle or owner to set a new oracle.\n @param _newOracle The address to transfer oracleship to.",
+            "id": 1332,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferOracle_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1316,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1315,
+                  "name": "_newOracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1332,
+                  "src": "1427:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1314,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1427:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1426:20:4"
+            },
+            "returnParameters": {
+              "id": 1317,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1454:0:4"
+            },
+            "scope": 1357,
+            "src": "1400:230:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1355,
+              "nodeType": "Block",
+              "src": "1824:159:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 1342,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 1338,
+                          "name": "_newOracle",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1334,
+                          "src": "1842:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 1340,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1864:1:4",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 1339,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1856:7:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 1341,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1856:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "1842:24:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4f7261636c652063616e277420626520307830",
+                        "id": 1343,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1868:21:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_3d8615aada901f84b1622616b7366bee08bf07e7b5b658cedc61e04c9cc79fde",
+                          "typeString": "literal_string \"Oracle can't be 0x0\""
+                        },
+                        "value": "Oracle can't be 0x0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_3d8615aada901f84b1622616b7366bee08bf07e7b5b658cedc61e04c9cc79fde",
+                          "typeString": "literal_string \"Oracle can't be 0x0\""
+                        }
+                      ],
+                      "id": 1337,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        14598,
+                        14599
+                      ],
+                      "referencedDeclaration": 14599,
+                      "src": "1834:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 1344,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1834:56:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1345,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1834:56:4"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1347,
+                        "name": "oracle",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1987,
+                        "src": "1928:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1348,
+                        "name": "_newOracle",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1334,
+                        "src": "1936:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1346,
+                      "name": "LogOracleTransfered_V1",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1273,
+                      "src": "1905:22:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 1349,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1905:42:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1350,
+                  "nodeType": "EmitStatement",
+                  "src": "1900:47:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1353,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1351,
+                      "name": "oracle",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1987,
+                      "src": "1957:6:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1352,
+                      "name": "_newOracle",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1334,
+                      "src": "1966:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1957:19:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 1354,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1957:19:4"
+                }
+              ]
+            },
+            "documentation": "@notice Transfers control of the contract to a newOracle.\n @param _newOracle The address to transfer oracleship to.",
+            "id": 1356,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_transferOracle_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1335,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1334,
+                  "name": "_newOracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1356,
+                  "src": "1795:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1333,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1795:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1794:20:4"
+            },
+            "returnParameters": {
+              "id": 1336,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1824:0:4"
+            },
+            "scope": 1357,
+            "src": "1767:216:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1358,
+        "src": "96:1889:4"
+      }
+    ],
+    "src": "0:1986:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/CommonContract/AuctionityOracable_V1.sol",
+    "exportedSymbols": {
+      "AuctionityOracable_V1": [
+        1357
+      ]
+    },
+    "id": 1358,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1264,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "absolutePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/CommonContract/AuctionityLibrary_V1.sol",
+        "file": "./AuctionityLibrary_V1.sol",
+        "id": 1265,
+        "nodeType": "ImportDirective",
+        "scope": 1358,
+        "sourceUnit": 1263,
+        "src": "25:36:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1266,
+              "name": "AuctionityLibrary_V1",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1262,
+              "src": "130:20:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AuctionityLibrary_V1_$1262",
+                "typeString": "contract AuctionityLibrary_V1"
+              }
+            },
+            "id": 1267,
+            "nodeType": "InheritanceSpecifier",
+            "src": "130:20:4"
+          }
+        ],
+        "contractDependencies": [
+          1262,
+          1994
+        ],
+        "contractKind": "contract",
+        "documentation": "@title AuctionityOracable_V1",
+        "fullyImplemented": true,
+        "id": 1357,
+        "linearizedBaseContracts": [
+          1357,
+          1262,
+          1994
+        ],
+        "name": "AuctionityOracable_V1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": "@notice event LogOracleTransfered_V1",
+            "id": 1273,
+            "name": "LogOracleTransfered_V1",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1272,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1269,
+                  "indexed": true,
+                  "name": "previousOracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1273,
+                  "src": "240:30:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1268,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "240:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1271,
+                  "indexed": true,
+                  "name": "newOracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1273,
+                  "src": "280:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1270,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "280:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "230:81:4"
+            },
+            "src": "202:110:4"
+          },
+          {
+            "body": {
+              "id": 1281,
+              "nodeType": "Block",
+              "src": "506:38:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 1278,
+                      "name": "getOracle_V1",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1290,
+                      "src": "523:12:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
+                        "typeString": "function () view returns (address)"
+                      }
+                    },
+                    "id": 1279,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "523:14:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 1277,
+                  "id": 1280,
+                  "nodeType": "Return",
+                  "src": "516:21:4"
+                }
+              ]
+            },
+            "documentation": "@notice delegate receive of getOracle\n @return  _oracle address",
+            "id": 1282,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "delegatedReceiveGetOracle_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1274,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "434:2:4"
+            },
+            "returnParameters": {
+              "id": 1277,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1276,
+                  "name": "_oracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1282,
+                  "src": "485:15:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1275,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "485:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "484:17:4"
+            },
+            "scope": 1357,
+            "src": "397:147:4",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1289,
+              "nodeType": "Block",
+              "src": "683:30:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1287,
+                    "name": "oracle",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1987,
+                    "src": "700:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 1286,
+                  "id": 1288,
+                  "nodeType": "Return",
+                  "src": "693:13:4"
+                }
+              ]
+            },
+            "documentation": "@notice getter oracle address\n @return  _oracle address",
+            "id": 1290,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getOracle_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1283,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "642:2:4"
+            },
+            "returnParameters": {
+              "id": 1286,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1285,
+                  "name": "_oracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1290,
+                  "src": "666:15:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1284,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "666:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "665:17:4"
+            },
+            "scope": 1357,
+            "src": "621:92:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1300,
+              "nodeType": "Block",
+              "src": "857:44:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 1298,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1295,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14595,
+                        "src": "874:3:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 1296,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "874:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 1297,
+                      "name": "oracle",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1987,
+                      "src": "888:6:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "874:20:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 1294,
+                  "id": 1299,
+                  "nodeType": "Return",
+                  "src": "867:27:4"
+                }
+              ]
+            },
+            "documentation": "@notice verify if msg.sender is oracle\n @return _isOracle bool",
+            "id": 1301,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isOracle_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1291,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "817:2:4"
+            },
+            "returnParameters": {
+              "id": 1294,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1293,
+                  "name": "_isOracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1301,
+                  "src": "841:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1292,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "841:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "840:16:4"
+            },
+            "scope": 1357,
+            "src": "797:104:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1312,
+              "nodeType": "Block",
+              "src": "1216:41:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 1310,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 1308,
+                      "name": "_oracle",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1303,
+                      "src": "1233:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 1309,
+                      "name": "oracle",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1987,
+                      "src": "1244:6:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1233:17:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 1307,
+                  "id": 1311,
+                  "nodeType": "Return",
+                  "src": "1226:24:4"
+                }
+              ]
+            },
+            "documentation": "@notice verify oracle address\n @param _oracle address : address to compare\n @return _isOracle bool",
+            "id": 1313,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verifyOracle_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1304,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1303,
+                  "name": "_oracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1313,
+                  "src": "1134:15:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1302,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1134:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1133:17:4"
+            },
+            "returnParameters": {
+              "id": 1307,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1306,
+                  "name": "_isOracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1313,
+                  "src": "1196:14:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1305,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1196:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1195:16:4"
+            },
+            "scope": 1357,
+            "src": "1109:148:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1331,
+              "nodeType": "Block",
+              "src": "1454:176:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 1323,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "id": 1319,
+                            "name": "isOracle_V1",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1301,
+                            "src": "1485:11:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_view$__$returns$_t_bool_$",
+                              "typeString": "function () view returns (bool)"
+                            }
+                          },
+                          "id": 1320,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1485:13:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "||",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "id": 1321,
+                            "name": "delegatedSendIsContractOwner_V1",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1067,
+                            "src": "1502:31:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_nonpayable$__$returns$_t_bool_$",
+                              "typeString": "function () returns (bool)"
+                            }
+                          },
+                          "id": 1322,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1502:33:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "src": "1485:50:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4973206e6f74204f7261636c65206f72204f776e6572",
+                        "id": 1324,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1549:24:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_137beaf9e5c095cff6e689455b8b0772fd2d0fff744de01842e3ee72f1558558",
+                          "typeString": "literal_string \"Is not Oracle or Owner\""
+                        },
+                        "value": "Is not Oracle or Owner"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_137beaf9e5c095cff6e689455b8b0772fd2d0fff744de01842e3ee72f1558558",
+                          "typeString": "literal_string \"Is not Oracle or Owner\""
+                        }
+                      ],
+                      "id": 1318,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        14598,
+                        14599
+                      ],
+                      "referencedDeclaration": 14599,
+                      "src": "1464:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 1325,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1464:119:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1326,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1464:119:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1328,
+                        "name": "_newOracle",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1315,
+                        "src": "1612:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1327,
+                      "name": "_transferOracle_V1",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1356,
+                      "src": "1593:18:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 1329,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1593:30:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1330,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1593:30:4"
+                }
+              ]
+            },
+            "documentation": "@notice Allows the current oracle or owner to set a new oracle.\n @param _newOracle The address to transfer oracleship to.",
+            "id": 1332,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferOracle_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1316,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1315,
+                  "name": "_newOracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1332,
+                  "src": "1427:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1314,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1427:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1426:20:4"
+            },
+            "returnParameters": {
+              "id": 1317,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1454:0:4"
+            },
+            "scope": 1357,
+            "src": "1400:230:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1355,
+              "nodeType": "Block",
+              "src": "1824:159:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 1342,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 1338,
+                          "name": "_newOracle",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1334,
+                          "src": "1842:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 1340,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1864:1:4",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 1339,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1856:7:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 1341,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1856:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "1842:24:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4f7261636c652063616e277420626520307830",
+                        "id": 1343,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1868:21:4",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_3d8615aada901f84b1622616b7366bee08bf07e7b5b658cedc61e04c9cc79fde",
+                          "typeString": "literal_string \"Oracle can't be 0x0\""
+                        },
+                        "value": "Oracle can't be 0x0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_3d8615aada901f84b1622616b7366bee08bf07e7b5b658cedc61e04c9cc79fde",
+                          "typeString": "literal_string \"Oracle can't be 0x0\""
+                        }
+                      ],
+                      "id": 1337,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        14598,
+                        14599
+                      ],
+                      "referencedDeclaration": 14599,
+                      "src": "1834:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 1344,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1834:56:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1345,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1834:56:4"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1347,
+                        "name": "oracle",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1987,
+                        "src": "1928:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1348,
+                        "name": "_newOracle",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1334,
+                        "src": "1936:10:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1346,
+                      "name": "LogOracleTransfered_V1",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1273,
+                      "src": "1905:22:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 1349,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1905:42:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1350,
+                  "nodeType": "EmitStatement",
+                  "src": "1900:47:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1353,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1351,
+                      "name": "oracle",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1987,
+                      "src": "1957:6:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1352,
+                      "name": "_newOracle",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1334,
+                      "src": "1966:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1957:19:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 1354,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1957:19:4"
+                }
+              ]
+            },
+            "documentation": "@notice Transfers control of the contract to a newOracle.\n @param _newOracle The address to transfer oracleship to.",
+            "id": 1356,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_transferOracle_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1335,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1334,
+                  "name": "_newOracle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1356,
+                  "src": "1795:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1333,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1795:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1794:20:4"
+            },
+            "returnParameters": {
+              "id": 1336,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1824:0:4"
+            },
+            "scope": 1357,
+            "src": "1767:216:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1358,
+        "src": "96:1889:4"
+      }
+    ],
+    "src": "0:1986:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.4+commit.9549d8ff.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.2",
+  "updatedAt": "2019-09-20T07:24:53.341Z",
+  "devdoc": {
+    "methods": {
+      "delegatedLockDeposit_V1(address,uint256,uint256,uint256,address)": {
+        "params": {
+          "_amount": "uint256",
+          "_auctionId": "uint256",
+          "_refundUser": "address",
+          "_tokenContractAddress": "address",
+          "_tokenId": "uint256"
+        },
+        "return": "bool _isPaused"
+      },
+      "delegatedReceiveGetOracle_V1()": {
+        "return": "_oracle address"
+      },
+      "delegatedSendGetOracle_V1()": {
+        "return": "address _oracle"
+      },
+      "delegatedSendGetPaused_V1()": {
+        "return": "bool _isPaused"
+      },
+      "delegatedSendIsContractOwner_V1()": {
+        "return": "_isContractOwner"
+      },
+      "getDelegate_V1(bytes4)": {
+        "params": {
+          "_selector": "byte4"
+        },
+        "return": "_contractDelegate address"
+      },
+      "getOracle_V1()": {
+        "return": "_oracle address"
+      },
+      "isOracle_V1()": {
+        "return": "_isOracle bool"
+      },
+      "transferOracle_V1(address)": {
+        "params": {
+          "_newOracle": "The address to transfer oracleship to."
+        }
+      },
+      "verifyOracle_V1(address)": {
+        "params": {
+          "_oracle": "address : address to compare"
+        },
+        "return": "_isOracle bool"
+      }
+    },
+    "title": "AuctionityOracable_V1"
+  },
+  "userdoc": {
+    "methods": {
+      "delegatedLockDeposit_V1(address,uint256,uint256,uint256,address)": {
+        "notice": "delegate lockDeposit_V1"
+      },
+      "delegatedReceiveGetOracle_V1()": {
+        "notice": "delegate receive of getOracle"
+      },
+      "delegatedSendGetOracle_V1()": {
+        "notice": "delegate getOracle_V1"
+      },
+      "delegatedSendGetPaused_V1()": {
+        "notice": "delegate getPaused_V1"
+      },
+      "delegatedSendIsContractOwner_V1()": {
+        "notice": "delegate IsContractOwner_V1"
+      },
+      "getDelegate_V1(bytes4)": {
+        "notice": "get delegated addrss from a selector"
+      },
+      "getOracle_V1()": {
+        "notice": "getter oracle address"
+      },
+      "isOracle_V1()": {
+        "notice": "verify if msg.sender is oracle"
+      },
+      "transferOracle_V1(address)": {
+        "notice": "Allows the current oracle or owner to set a new oracle."
+      },
+      "verifyOracle_V1(address)": {
+        "notice": "verify oracle address"
+      }
+    }
+  }
+}
