@@ -1,0 +1,1607 @@
+{
+  "contractName": "AuctionityChainId_V1",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "ethereumChainId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "delegatedSendGetOracle_V1",
+      "outputs": [
+        {
+          "name": "_oracle",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_tokenContractAddress",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "name": "_auctionId",
+          "type": "uint256"
+        },
+        {
+          "name": "_refundUser",
+          "type": "address"
+        }
+      ],
+      "name": "delegatedLockDeposit_V1",
+      "outputs": [
+        {
+          "name": "_success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "oracle",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "auctionityChainId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proxyFallbackContract",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "contractOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "getDelegate_V1",
+      "outputs": [
+        {
+          "name": "_contractDelegate",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "delegatedSendGetPaused_V1",
+      "outputs": [
+        {
+          "name": "_isPaused",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "delegatedSendIsContractOwner_V1",
+      "outputs": [
+        {
+          "name": "_isContractOwner",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getEthereumChainId_V1",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getAuctionityChainId_V1",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_ethereumChainId",
+          "type": "uint8"
+        }
+      ],
+      "name": "setEthereumChainId_V1",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_auctionityChainId",
+          "type": "uint8"
+        }
+      ],
+      "name": "setAuctionityChainId_V1",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50610822806100206000396000f3fe608060405234801561001057600080fd5b5060043610610112576000357c010000000000000000000000000000000000000000000000000000000090048063a0709812116100b4578063e0237f9111610083578063e0237f9114610221578063ecc799b714610248578063f0791d0614610250578063fde2ab801461025857610112565b8063a070981214610201578063c6afc73614610209578063ce606ee014610211578063ce7825521461021957610112565b80635470fb47116100f05780635470fb471461017757806356eed26e1461019b5780635c975abb146101f15780637dc0d1d0146101f957610112565b806301890df6146101175780632cf19b6e146101355780634323fb1214610157575b600080fd5b61011f610260565b6040805160ff9092168252519081900360200190f35b6101556004803603602081101561014b57600080fd5b503560ff16610282565b005b6101556004803603602081101561016d57600080fd5b503560ff16610327565b61017f6103ca565b60408051600160a060020a039092168252519081900360200190f35b6101dd600480360360a08110156101b157600080fd5b50600160a060020a03813581169160208101359160408201359160608101359160809091013516610443565b604080519115158252519081900360200190f35b6101dd6104de565b61017f6104ff565b61011f61050e565b61017f610531565b61017f610540565b61011f61054f565b61017f6004803603602081101561023757600080fd5b5035600160e060020a031916610571565b61011f610596565b6101dd6105b9565b6101dd610629565b6003547501000000000000000000000000000000000000000000900460ff1681565b61028a610629565b15156102e1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260238152602001806107566023913960400191505060405180910390fd5b6003805460ff9092167601000000000000000000000000000000000000000000000276ff0000000000000000000000000000000000000000000019909216919091179055565b61032f610629565b1515610386576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806107356021913960400191505060405180910390fd5b6003805460ff90921675010000000000000000000000000000000000000000000275ff00000000000000000000000000000000000000000019909216919091179055565b604080517f64656c656761746564526563656976654765744f7261636c655f5631282900008152815190819003601e0181206004825260248201909252602081018051600160e060020a0316600160e060020a0319909316929092179091526000908190819061043a908261067c565b50519250505090565b60008060006104d060405180806107c06037913960408051918290036037018220600160a060020a03808e166024850152604484018d9052606484018c9052608484018b9052891660a4808501919091528251808503909101815260c4909301909152602082018051600160e060020a0316600160e060020a03199092169190911790529050600061067c565b505198975050505050505050565b60035474010000000000000000000000000000000000000000900460ff1681565b600354600160a060020a031681565b600354760100000000000000000000000000000000000000000000900460ff1681565b600154600160a060020a031681565b600254600160a060020a031681565b6003547501000000000000000000000000000000000000000000900460ff1690565b600160e060020a031916600090815260208190526040902054600160a060020a031690565b600354760100000000000000000000000000000000000000000000900460ff1690565b604080517f64656c656761746564526563656976654765745061757365645f5631282900008152815190819003601e0181206004825260248201909252602081018051600160e060020a0316600160e060020a0319909316929092179091526000908190819061043a908261067c565b600080600061043a604051808061079c6024913960408051918290036024908101832060048452908301909152602082018051600160e060020a0316600160e060020a0319909216919091179052905060005b602082015160009081908161069082610571565b9050600160a060020a03811615156106a55750835b600160a060020a0381161515610706576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260238152602001806107796023913960400191505060405180910390fd5b600080875160208901845af43d93506040519450836000863e80151561072a578385fd5b505050925092905056fe736574457468657265756d436861696e496420436f6e7472616374206f776e657273657441756374696f6e697479436861696e496420436f6e7472616374206f776e657241756374696f6e6974792066756e6374696f6e20646f6573206e6f742065786973742e64656c656761746564526563656976654973436f6e74726163744f776e65725f563128296c6f636b4465706f7369745f563128616464726573732c75696e743235362c75696e743235362c75696e743235362c6164647265737329a165627a7a72305820e77e92e4d56c21ee94b0fa70e74062f1201ad1326ee71241770cf0eeadbf1a4f0029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b5060043610610112576000357c010000000000000000000000000000000000000000000000000000000090048063a0709812116100b4578063e0237f9111610083578063e0237f9114610221578063ecc799b714610248578063f0791d0614610250578063fde2ab801461025857610112565b8063a070981214610201578063c6afc73614610209578063ce606ee014610211578063ce7825521461021957610112565b80635470fb47116100f05780635470fb471461017757806356eed26e1461019b5780635c975abb146101f15780637dc0d1d0146101f957610112565b806301890df6146101175780632cf19b6e146101355780634323fb1214610157575b600080fd5b61011f610260565b6040805160ff9092168252519081900360200190f35b6101556004803603602081101561014b57600080fd5b503560ff16610282565b005b6101556004803603602081101561016d57600080fd5b503560ff16610327565b61017f6103ca565b60408051600160a060020a039092168252519081900360200190f35b6101dd600480360360a08110156101b157600080fd5b50600160a060020a03813581169160208101359160408201359160608101359160809091013516610443565b604080519115158252519081900360200190f35b6101dd6104de565b61017f6104ff565b61011f61050e565b61017f610531565b61017f610540565b61011f61054f565b61017f6004803603602081101561023757600080fd5b5035600160e060020a031916610571565b61011f610596565b6101dd6105b9565b6101dd610629565b6003547501000000000000000000000000000000000000000000900460ff1681565b61028a610629565b15156102e1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260238152602001806107566023913960400191505060405180910390fd5b6003805460ff9092167601000000000000000000000000000000000000000000000276ff0000000000000000000000000000000000000000000019909216919091179055565b61032f610629565b1515610386576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806107356021913960400191505060405180910390fd5b6003805460ff90921675010000000000000000000000000000000000000000000275ff00000000000000000000000000000000000000000019909216919091179055565b604080517f64656c656761746564526563656976654765744f7261636c655f5631282900008152815190819003601e0181206004825260248201909252602081018051600160e060020a0316600160e060020a0319909316929092179091526000908190819061043a908261067c565b50519250505090565b60008060006104d060405180806107c06037913960408051918290036037018220600160a060020a03808e166024850152604484018d9052606484018c9052608484018b9052891660a4808501919091528251808503909101815260c4909301909152602082018051600160e060020a0316600160e060020a03199092169190911790529050600061067c565b505198975050505050505050565b60035474010000000000000000000000000000000000000000900460ff1681565b600354600160a060020a031681565b600354760100000000000000000000000000000000000000000000900460ff1681565b600154600160a060020a031681565b600254600160a060020a031681565b6003547501000000000000000000000000000000000000000000900460ff1690565b600160e060020a031916600090815260208190526040902054600160a060020a031690565b600354760100000000000000000000000000000000000000000000900460ff1690565b604080517f64656c656761746564526563656976654765745061757365645f5631282900008152815190819003601e0181206004825260248201909252602081018051600160e060020a0316600160e060020a0319909316929092179091526000908190819061043a908261067c565b600080600061043a604051808061079c6024913960408051918290036024908101832060048452908301909152602082018051600160e060020a0316600160e060020a0319909216919091179052905060005b602082015160009081908161069082610571565b9050600160a060020a03811615156106a55750835b600160a060020a0381161515610706576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260238152602001806107796023913960400191505060405180910390fd5b600080875160208901845af43d93506040519450836000863e80151561072a578385fd5b505050925092905056fe736574457468657265756d436861696e496420436f6e7472616374206f776e657273657441756374696f6e697479436861696e496420436f6e7472616374206f776e657241756374696f6e6974792066756e6374696f6e20646f6573206e6f742065786973742e64656c656761746564526563656976654973436f6e74726163744f776e65725f563128296c6f636b4465706f7369745f563128616464726573732c75696e743235362c75696e743235362c75696e743235362c6164647265737329a165627a7a72305820e77e92e4d56c21ee94b0fa70e74062f1201ad1326ee71241770cf0eeadbf1a4f0029",
+  "sourceMap": "101:1153:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;101:1153:0;;;;;;;",
+  "deployedSourceMap": "101:1153:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;101:1153:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;334:28:9;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1005:246:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1005:246:0;;;;:::i;:::-;;651:236;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;651:236:0;;;;:::i;2983:428:3:-;;;:::i;:::-;;;;-1:-1:-1;;;;;2983:428:3;;;;;;;;;;;;;;4170:833;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;-1:-1;;;;;;4170:833:3;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;309:18:9;;;:::i;281:21::-;;;:::i;368:30::-;;;:::i;204:36::-;;;:::i;247:28::-;;;:::i;243:100:0:-;;;:::i;313:162:3:-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;313:162:3;-1:-1:-1;;;;;;313:162:3;;:::i;435:104:0:-;;;:::i;3486:430:3:-;;;:::i;2244:484::-;;;:::i;334:28:9:-;;;;;;;;;:::o;1005:246:0:-;1102:33;:31;:33::i;:::-;1081:115;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1206:17;:38;;;;;;;;-1:-1:-1;;1206:38:0;;;;;;;;;1005:246::o;651:236::-;744:33;:31;:33::i;:::-;723:113;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;846:15;:34;;;;;;;;-1:-1:-1;;846:34:0;;;;;;;;;651:236::o;2983:428:3:-;3217:43;;;;;;;;;;;;;;;;22:32:-1;6:49;;3170:105:3;;;;;;49:4:-1;25:18;;61:17;;-1:-1;;;;;182:15;-1:-1;;;;;;3170:105:3;;;179:29:-1;;;;160:49;;;3036:15:3;;;;;;3139:170;;3036:15;3139:17;:170::i;:::-;-1:-1:-1;3354:16:3;;-1:-1:-1;;;2983:428:3;:::o;4170:833::-;4372:13;4397:14;4421:15;4473:426;4572:114;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;4504:361:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;26:21:-1;;;22:32;;;6:49;;4504:361:3;;;;;;;;25:18:-1;;61:17;;-1:-1;;;;;182:15;-1:-1;;;;;;4504:361:3;;;179:29:-1;;;;160:49;;4504:361:3;-1:-1:-1;;4473:17:3;:426::i;:::-;-1:-1:-1;4945:16:3;;4170:833;-1:-1:-1;;;;;;;;4170:833:3:o;309:18:9:-;;;;;;;;;:::o;281:21::-;;;-1:-1:-1;;;;;281:21:9;;:::o;368:30::-;;;;;;;;;:::o;204:36::-;;;-1:-1:-1;;;;;204:36:9;;:::o;247:28::-;;;-1:-1:-1;;;;;247:28:9;;:::o;243:100:0:-;321:15;;;;;;;;243:100::o;313:162:3:-;-1:-1:-1;;;;;;448:20:3;400:25;448:20;;;;;;;;;;;-1:-1:-1;;;;;448:20:3;;313:162::o;435:104:0:-;515:17;;;;;;;;435:104::o;3486:430:3:-;3719:43;;;;;;;;;;;;;;;;22:32:-1;6:49;;3672:105:3;;;;;;49:4:-1;25:18;;61:17;;-1:-1;;;;;182:15;-1:-1;;;;;;3672:105:3;;;179:29:-1;;;;160:49;;;3539:14:3;;;;;;3641:170;;3539:14;3641:17;:170::i;2244:484::-;2319:21;2356:14;2380:15;2432:176;2510:49;;;;;;;;;;;;;;;;;;;;;22:32:-1;6:49;;2463:111:3;;;;;;49:4:-1;25:18;;61:17;;-1:-1;;;;;182:15;-1:-1;;;;;;2463:111:3;;;179:29:-1;;;;160:49;;2510::3;-1:-1:-1;26:21;778:1382:3;1067:4;1052:20;;1046:27;896:14;;;;;1177:25;1046:27;1177:14;:25::i;:::-;1149:53;-1:-1:-1;;;;;;1310:31:3;;;1306:99;;;-1:-1:-1;1377:17:3;1306:99;-1:-1:-1;;;;;1436:31:3;;;;1415:113;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1826:1;1807;1779:9;1773:16;1750:4;1739:9;1735:20;1700:17;1679:3;1649:192;1868:14;1854:28;;1914:4;1908:11;1895:24;;1961:10;1958:1;1947:9;1932:40;1988:13;;1985:2;;;2038:10;2027:9;2020:29;1985:2;-1:-1:-1;;;778:1382:3;;;;;:::o",
+  "source": "pragma solidity ^0.5.4;\n\nimport \"./AuctionityLibrary_V1.sol\";\n\n/// @title Auctionity chainId library\ncontract AuctionityChainId_V1 is AuctionityLibrary_V1 {\n    /// @notice getter of ethereum network id\n    /// @return ethereum network id\n    function getEthereumChainId_V1() public view returns (uint8) {\n        return ethereumChainId;\n    }\n\n    /// @notice getter of auctionity network id\n    /// @return auctionity network id\n    function getAuctionityChainId_V1() public view returns (uint8) {\n        return auctionityChainId;\n    }\n\n    /// @notice setter of ethereum network id\n    /// @param _ethereumChainId uint8 : ethereum network id\n    function setEthereumChainId_V1(uint8 _ethereumChainId) public {\n        require(\n            delegatedSendIsContractOwner_V1(),\n            \"setEthereumChainId Contract owner\"\n        );\n        ethereumChainId = _ethereumChainId;\n    }\n\n    /// @notice setter of auctionity network id\n    /// @param _auctionityChainId uint8 : auctionity network id\n    function setAuctionityChainId_V1(uint8 _auctionityChainId) public {\n        require(\n            delegatedSendIsContractOwner_V1(),\n            \"setAuctionityChainId Contract owner\"\n        );\n        auctionityChainId = _auctionityChainId;\n    }\n\n}\n",
+  "sourcePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/CommonContract/AuctionityChainId_V1.sol",
+  "ast": {
+    "absolutePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/CommonContract/AuctionityChainId_V1.sol",
+    "exportedSymbols": {
+      "AuctionityChainId_V1": [
+        53
+      ]
+    },
+    "id": 54,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "absolutePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/CommonContract/AuctionityLibrary_V1.sol",
+        "file": "./AuctionityLibrary_V1.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 54,
+        "sourceUnit": 1263,
+        "src": "25:36:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3,
+              "name": "AuctionityLibrary_V1",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1262,
+              "src": "134:20:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AuctionityLibrary_V1_$1262",
+                "typeString": "contract AuctionityLibrary_V1"
+              }
+            },
+            "id": 4,
+            "nodeType": "InheritanceSpecifier",
+            "src": "134:20:0"
+          }
+        ],
+        "contractDependencies": [
+          1262,
+          1994
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Auctionity chainId library",
+        "fullyImplemented": true,
+        "id": 53,
+        "linearizedBaseContracts": [
+          53,
+          1262,
+          1994
+        ],
+        "name": "AuctionityChainId_V1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 11,
+              "nodeType": "Block",
+              "src": "304:39:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 9,
+                    "name": "ethereumChainId",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1991,
+                    "src": "321:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 8,
+                  "id": 10,
+                  "nodeType": "Return",
+                  "src": "314:22:0"
+                }
+              ]
+            },
+            "documentation": "@notice getter of ethereum network id\n @return ethereum network id",
+            "id": 12,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getEthereumChainId_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "273:2:0"
+            },
+            "returnParameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "297:5:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 6,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "297:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "296:7:0"
+            },
+            "scope": 53,
+            "src": "243:100:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 19,
+              "nodeType": "Block",
+              "src": "498:41:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 17,
+                    "name": "auctionityChainId",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1993,
+                    "src": "515:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 16,
+                  "id": 18,
+                  "nodeType": "Return",
+                  "src": "508:24:0"
+                }
+              ]
+            },
+            "documentation": "@notice getter of auctionity network id\n @return auctionity network id",
+            "id": 20,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAuctionityChainId_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "467:2:0"
+            },
+            "returnParameters": {
+              "id": 16,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20,
+                  "src": "491:5:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 14,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "491:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "490:7:0"
+            },
+            "scope": 53,
+            "src": "435:104:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 35,
+              "nodeType": "Block",
+              "src": "713:174:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 26,
+                          "name": "delegatedSendIsContractOwner_V1",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1067,
+                          "src": "744:31:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_nonpayable$__$returns$_t_bool_$",
+                            "typeString": "function () returns (bool)"
+                          }
+                        },
+                        "id": 27,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "744:33:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "736574457468657265756d436861696e496420436f6e7472616374206f776e6572",
+                        "id": 28,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "791:35:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_0de1f5b45b6a84f3dd6431427b29e3b1186ccddb205ee1871361cee9e9f0bff5",
+                          "typeString": "literal_string \"setEthereumChainId Contract owner\""
+                        },
+                        "value": "setEthereumChainId Contract owner"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_0de1f5b45b6a84f3dd6431427b29e3b1186ccddb205ee1871361cee9e9f0bff5",
+                          "typeString": "literal_string \"setEthereumChainId Contract owner\""
+                        }
+                      ],
+                      "id": 25,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        14598,
+                        14599
+                      ],
+                      "referencedDeclaration": 14599,
+                      "src": "723:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 29,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "723:113:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 30,
+                  "nodeType": "ExpressionStatement",
+                  "src": "723:113:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 33,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 31,
+                      "name": "ethereumChainId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1991,
+                      "src": "846:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 32,
+                      "name": "_ethereumChainId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22,
+                      "src": "864:16:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "846:34:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 34,
+                  "nodeType": "ExpressionStatement",
+                  "src": "846:34:0"
+                }
+              ]
+            },
+            "documentation": "@notice setter of ethereum network id\n @param _ethereumChainId uint8 : ethereum network id",
+            "id": 36,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setEthereumChainId_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 23,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22,
+                  "name": "_ethereumChainId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36,
+                  "src": "682:22:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 21,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "682:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "681:24:0"
+            },
+            "returnParameters": {
+              "id": 24,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "713:0:0"
+            },
+            "scope": 53,
+            "src": "651:236:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 51,
+              "nodeType": "Block",
+              "src": "1071:180:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 42,
+                          "name": "delegatedSendIsContractOwner_V1",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1067,
+                          "src": "1102:31:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_nonpayable$__$returns$_t_bool_$",
+                            "typeString": "function () returns (bool)"
+                          }
+                        },
+                        "id": 43,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1102:33:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "73657441756374696f6e697479436861696e496420436f6e7472616374206f776e6572",
+                        "id": 44,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1149:37:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_3c42b899fdcdd14b5c54d45b8abcdbd17f822bbd3b6c8007ee89077a1953f238",
+                          "typeString": "literal_string \"setAuctionityChainId Contract owner\""
+                        },
+                        "value": "setAuctionityChainId Contract owner"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_3c42b899fdcdd14b5c54d45b8abcdbd17f822bbd3b6c8007ee89077a1953f238",
+                          "typeString": "literal_string \"setAuctionityChainId Contract owner\""
+                        }
+                      ],
+                      "id": 41,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        14598,
+                        14599
+                      ],
+                      "referencedDeclaration": 14599,
+                      "src": "1081:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 45,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1081:115:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 46,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1081:115:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 49,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 47,
+                      "name": "auctionityChainId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1993,
+                      "src": "1206:17:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 48,
+                      "name": "_auctionityChainId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38,
+                      "src": "1226:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "1206:38:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 50,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1206:38:0"
+                }
+              ]
+            },
+            "documentation": "@notice setter of auctionity network id\n @param _auctionityChainId uint8 : auctionity network id",
+            "id": 52,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setAuctionityChainId_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 39,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38,
+                  "name": "_auctionityChainId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52,
+                  "src": "1038:24:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 37,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1038:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1037:26:0"
+            },
+            "returnParameters": {
+              "id": 40,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1071:0:0"
+            },
+            "scope": 53,
+            "src": "1005:246:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 54,
+        "src": "101:1153:0"
+      }
+    ],
+    "src": "0:1255:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/CommonContract/AuctionityChainId_V1.sol",
+    "exportedSymbols": {
+      "AuctionityChainId_V1": [
+        53
+      ]
+    },
+    "id": 54,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "absolutePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/CommonContract/AuctionityLibrary_V1.sol",
+        "file": "./AuctionityLibrary_V1.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 54,
+        "sourceUnit": 1263,
+        "src": "25:36:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3,
+              "name": "AuctionityLibrary_V1",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1262,
+              "src": "134:20:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AuctionityLibrary_V1_$1262",
+                "typeString": "contract AuctionityLibrary_V1"
+              }
+            },
+            "id": 4,
+            "nodeType": "InheritanceSpecifier",
+            "src": "134:20:0"
+          }
+        ],
+        "contractDependencies": [
+          1262,
+          1994
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Auctionity chainId library",
+        "fullyImplemented": true,
+        "id": 53,
+        "linearizedBaseContracts": [
+          53,
+          1262,
+          1994
+        ],
+        "name": "AuctionityChainId_V1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 11,
+              "nodeType": "Block",
+              "src": "304:39:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 9,
+                    "name": "ethereumChainId",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1991,
+                    "src": "321:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 8,
+                  "id": 10,
+                  "nodeType": "Return",
+                  "src": "314:22:0"
+                }
+              ]
+            },
+            "documentation": "@notice getter of ethereum network id\n @return ethereum network id",
+            "id": 12,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getEthereumChainId_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "273:2:0"
+            },
+            "returnParameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "297:5:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 6,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "297:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "296:7:0"
+            },
+            "scope": 53,
+            "src": "243:100:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 19,
+              "nodeType": "Block",
+              "src": "498:41:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 17,
+                    "name": "auctionityChainId",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1993,
+                    "src": "515:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 16,
+                  "id": 18,
+                  "nodeType": "Return",
+                  "src": "508:24:0"
+                }
+              ]
+            },
+            "documentation": "@notice getter of auctionity network id\n @return auctionity network id",
+            "id": 20,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAuctionityChainId_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "467:2:0"
+            },
+            "returnParameters": {
+              "id": 16,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20,
+                  "src": "491:5:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 14,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "491:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "490:7:0"
+            },
+            "scope": 53,
+            "src": "435:104:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 35,
+              "nodeType": "Block",
+              "src": "713:174:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 26,
+                          "name": "delegatedSendIsContractOwner_V1",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1067,
+                          "src": "744:31:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_nonpayable$__$returns$_t_bool_$",
+                            "typeString": "function () returns (bool)"
+                          }
+                        },
+                        "id": 27,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "744:33:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "736574457468657265756d436861696e496420436f6e7472616374206f776e6572",
+                        "id": 28,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "791:35:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_0de1f5b45b6a84f3dd6431427b29e3b1186ccddb205ee1871361cee9e9f0bff5",
+                          "typeString": "literal_string \"setEthereumChainId Contract owner\""
+                        },
+                        "value": "setEthereumChainId Contract owner"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_0de1f5b45b6a84f3dd6431427b29e3b1186ccddb205ee1871361cee9e9f0bff5",
+                          "typeString": "literal_string \"setEthereumChainId Contract owner\""
+                        }
+                      ],
+                      "id": 25,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        14598,
+                        14599
+                      ],
+                      "referencedDeclaration": 14599,
+                      "src": "723:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 29,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "723:113:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 30,
+                  "nodeType": "ExpressionStatement",
+                  "src": "723:113:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 33,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 31,
+                      "name": "ethereumChainId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1991,
+                      "src": "846:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 32,
+                      "name": "_ethereumChainId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22,
+                      "src": "864:16:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "846:34:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 34,
+                  "nodeType": "ExpressionStatement",
+                  "src": "846:34:0"
+                }
+              ]
+            },
+            "documentation": "@notice setter of ethereum network id\n @param _ethereumChainId uint8 : ethereum network id",
+            "id": 36,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setEthereumChainId_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 23,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22,
+                  "name": "_ethereumChainId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36,
+                  "src": "682:22:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 21,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "682:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "681:24:0"
+            },
+            "returnParameters": {
+              "id": 24,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "713:0:0"
+            },
+            "scope": 53,
+            "src": "651:236:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 51,
+              "nodeType": "Block",
+              "src": "1071:180:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 42,
+                          "name": "delegatedSendIsContractOwner_V1",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1067,
+                          "src": "1102:31:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_nonpayable$__$returns$_t_bool_$",
+                            "typeString": "function () returns (bool)"
+                          }
+                        },
+                        "id": 43,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1102:33:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "73657441756374696f6e697479436861696e496420436f6e7472616374206f776e6572",
+                        "id": 44,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1149:37:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_3c42b899fdcdd14b5c54d45b8abcdbd17f822bbd3b6c8007ee89077a1953f238",
+                          "typeString": "literal_string \"setAuctionityChainId Contract owner\""
+                        },
+                        "value": "setAuctionityChainId Contract owner"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_3c42b899fdcdd14b5c54d45b8abcdbd17f822bbd3b6c8007ee89077a1953f238",
+                          "typeString": "literal_string \"setAuctionityChainId Contract owner\""
+                        }
+                      ],
+                      "id": 41,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        14598,
+                        14599
+                      ],
+                      "referencedDeclaration": 14599,
+                      "src": "1081:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 45,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1081:115:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 46,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1081:115:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 49,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 47,
+                      "name": "auctionityChainId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1993,
+                      "src": "1206:17:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 48,
+                      "name": "_auctionityChainId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38,
+                      "src": "1226:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "1206:38:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 50,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1206:38:0"
+                }
+              ]
+            },
+            "documentation": "@notice setter of auctionity network id\n @param _auctionityChainId uint8 : auctionity network id",
+            "id": 52,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setAuctionityChainId_V1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 39,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38,
+                  "name": "_auctionityChainId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52,
+                  "src": "1038:24:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 37,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1038:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1037:26:0"
+            },
+            "returnParameters": {
+              "id": 40,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1071:0:0"
+            },
+            "scope": 53,
+            "src": "1005:246:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 54,
+        "src": "101:1153:0"
+      }
+    ],
+    "src": "0:1255:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.4+commit.9549d8ff.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.2",
+  "updatedAt": "2019-09-20T07:24:53.333Z",
+  "devdoc": {
+    "methods": {
+      "delegatedLockDeposit_V1(address,uint256,uint256,uint256,address)": {
+        "params": {
+          "_amount": "uint256",
+          "_auctionId": "uint256",
+          "_refundUser": "address",
+          "_tokenContractAddress": "address",
+          "_tokenId": "uint256"
+        },
+        "return": "bool _isPaused"
+      },
+      "delegatedSendGetOracle_V1()": {
+        "return": "address _oracle"
+      },
+      "delegatedSendGetPaused_V1()": {
+        "return": "bool _isPaused"
+      },
+      "delegatedSendIsContractOwner_V1()": {
+        "return": "_isContractOwner"
+      },
+      "getAuctionityChainId_V1()": {
+        "return": "auctionity network id"
+      },
+      "getDelegate_V1(bytes4)": {
+        "params": {
+          "_selector": "byte4"
+        },
+        "return": "_contractDelegate address"
+      },
+      "getEthereumChainId_V1()": {
+        "return": "ethereum network id"
+      },
+      "setAuctionityChainId_V1(uint8)": {
+        "params": {
+          "_auctionityChainId": "uint8 : auctionity network id"
+        }
+      },
+      "setEthereumChainId_V1(uint8)": {
+        "params": {
+          "_ethereumChainId": "uint8 : ethereum network id"
+        }
+      }
+    },
+    "title": "Auctionity chainId library"
+  },
+  "userdoc": {
+    "methods": {
+      "delegatedLockDeposit_V1(address,uint256,uint256,uint256,address)": {
+        "notice": "delegate lockDeposit_V1"
+      },
+      "delegatedSendGetOracle_V1()": {
+        "notice": "delegate getOracle_V1"
+      },
+      "delegatedSendGetPaused_V1()": {
+        "notice": "delegate getPaused_V1"
+      },
+      "delegatedSendIsContractOwner_V1()": {
+        "notice": "delegate IsContractOwner_V1"
+      },
+      "getAuctionityChainId_V1()": {
+        "notice": "getter of auctionity network id"
+      },
+      "getDelegate_V1(bytes4)": {
+        "notice": "get delegated addrss from a selector"
+      },
+      "getEthereumChainId_V1()": {
+        "notice": "getter of ethereum network id"
+      },
+      "setAuctionityChainId_V1(uint8)": {
+        "notice": "setter of auctionity network id"
+      },
+      "setEthereumChainId_V1(uint8)": {
+        "notice": "setter of ethereum network id"
+      }
+    }
+  }
+}

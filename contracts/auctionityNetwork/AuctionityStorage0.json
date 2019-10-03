@@ -1,0 +1,600 @@
+{
+  "contractName": "AuctionityStorage0",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "ethereumChainId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "oracle",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "auctionityChainId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proxyFallbackContract",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "contractOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b506101ec806100206000396000f3fe608060405234801561001057600080fd5b506004361061007e577c0100000000000000000000000000000000000000000000000000000000600035046301890df681146100835780635c975abb146100a15780637dc0d1d0146100bd578063a0709812146100ee578063c6afc736146100f6578063ce606ee0146100fe575b600080fd5b61008b610106565b6040805160ff9092168252519081900360200190f35b6100a9610128565b604080519115158252519081900360200190f35b6100c5610149565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b61008b610165565b6100c5610188565b6100c56101a4565b6003547501000000000000000000000000000000000000000000900460ff1681565b60035474010000000000000000000000000000000000000000900460ff1681565b60035473ffffffffffffffffffffffffffffffffffffffff1681565b600354760100000000000000000000000000000000000000000000900460ff1681565b60015473ffffffffffffffffffffffffffffffffffffffff1681565b60025473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a7230582006868afd3837aad117c700056bde344e0c857e83bc8d72b2dac4401c23c7c71d0029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007e577c0100000000000000000000000000000000000000000000000000000000600035046301890df681146100835780635c975abb146100a15780637dc0d1d0146100bd578063a0709812146100ee578063c6afc736146100f6578063ce606ee0146100fe575b600080fd5b61008b610106565b6040805160ff9092168252519081900360200190f35b6100a9610128565b604080519115158252519081900360200190f35b6100c5610149565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b61008b610165565b6100c5610188565b6100c56101a4565b6003547501000000000000000000000000000000000000000000900460ff1681565b60035474010000000000000000000000000000000000000000900460ff1681565b60035473ffffffffffffffffffffffffffffffffffffffff1681565b600354760100000000000000000000000000000000000000000000900460ff1681565b60015473ffffffffffffffffffffffffffffffffffffffff1681565b60025473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a7230582006868afd3837aad117c700056bde344e0c857e83bc8d72b2dac4401c23c7c71d0029",
+  "sourceMap": "25:376:9:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:376:9;;;;;;;",
+  "deployedSourceMap": "25:376:9:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:376:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;334:28;;;:::i;:::-;;;;;;;;;;;;;;;;;;;309:18;;;:::i;:::-;;;;;;;;;;;;;;;;;;281:21;;;:::i;:::-;;;;;;;;;;;;;;;;;;;368:30;;;:::i;204:36::-;;;:::i;247:28::-;;;:::i;334:::-;;;;;;;;;:::o;309:18::-;;;;;;;;;:::o;281:21::-;;;;;;:::o;368:30::-;;;;;;;;;:::o;204:36::-;;;;;;:::o;247:28::-;;;;;;:::o",
+  "source": "pragma solidity ^0.5.4;\n\ncontract AuctionityStorage0 {\n    // selector => delegate contract\n    mapping(bytes4 => address) internal delegates;\n\n    // If selector not found, fallback contract address\n    address public proxyFallbackContract;\n\n    address public contractOwner;\n    address public oracle;\n\n    bool public paused;\n\n    uint8 public ethereumChainId;\n    uint8 public auctionityChainId;\n}\n",
+  "sourcePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/CommonContract/AuctionityStorage0.sol",
+  "ast": {
+    "absolutePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/CommonContract/AuctionityStorage0.sol",
+    "exportedSymbols": {
+      "AuctionityStorage0": [
+        1994
+      ]
+    },
+    "id": 1995,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1977,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:9"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1994,
+        "linearizedBaseContracts": [
+          1994
+        ],
+        "name": "AuctionityStorage0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1981,
+            "name": "delegates",
+            "nodeType": "VariableDeclaration",
+            "scope": 1994,
+            "src": "96:45:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes4_$_t_address_$",
+              "typeString": "mapping(bytes4 => address)"
+            },
+            "typeName": {
+              "id": 1980,
+              "keyType": {
+                "id": 1978,
+                "name": "bytes4",
+                "nodeType": "ElementaryTypeName",
+                "src": "104:6:9",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "96:26:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes4_$_t_address_$",
+                "typeString": "mapping(bytes4 => address)"
+              },
+              "valueType": {
+                "id": 1979,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "114:7:9",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1983,
+            "name": "proxyFallbackContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 1994,
+            "src": "204:36:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1982,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "204:7:9",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1985,
+            "name": "contractOwner",
+            "nodeType": "VariableDeclaration",
+            "scope": 1994,
+            "src": "247:28:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1984,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "247:7:9",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1987,
+            "name": "oracle",
+            "nodeType": "VariableDeclaration",
+            "scope": 1994,
+            "src": "281:21:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1986,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "281:7:9",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1989,
+            "name": "paused",
+            "nodeType": "VariableDeclaration",
+            "scope": 1994,
+            "src": "309:18:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 1988,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "309:4:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1991,
+            "name": "ethereumChainId",
+            "nodeType": "VariableDeclaration",
+            "scope": 1994,
+            "src": "334:28:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 1990,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "334:5:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1993,
+            "name": "auctionityChainId",
+            "nodeType": "VariableDeclaration",
+            "scope": 1994,
+            "src": "368:30:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 1992,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "368:5:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1995,
+        "src": "25:376:9"
+      }
+    ],
+    "src": "0:402:9"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/mike/domraider/4x-sas/bc-auction-sc/contracts/CommonContract/AuctionityStorage0.sol",
+    "exportedSymbols": {
+      "AuctionityStorage0": [
+        1994
+      ]
+    },
+    "id": 1995,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1977,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:9"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1994,
+        "linearizedBaseContracts": [
+          1994
+        ],
+        "name": "AuctionityStorage0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1981,
+            "name": "delegates",
+            "nodeType": "VariableDeclaration",
+            "scope": 1994,
+            "src": "96:45:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes4_$_t_address_$",
+              "typeString": "mapping(bytes4 => address)"
+            },
+            "typeName": {
+              "id": 1980,
+              "keyType": {
+                "id": 1978,
+                "name": "bytes4",
+                "nodeType": "ElementaryTypeName",
+                "src": "104:6:9",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "96:26:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes4_$_t_address_$",
+                "typeString": "mapping(bytes4 => address)"
+              },
+              "valueType": {
+                "id": 1979,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "114:7:9",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1983,
+            "name": "proxyFallbackContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 1994,
+            "src": "204:36:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1982,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "204:7:9",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1985,
+            "name": "contractOwner",
+            "nodeType": "VariableDeclaration",
+            "scope": 1994,
+            "src": "247:28:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1984,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "247:7:9",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1987,
+            "name": "oracle",
+            "nodeType": "VariableDeclaration",
+            "scope": 1994,
+            "src": "281:21:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1986,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "281:7:9",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1989,
+            "name": "paused",
+            "nodeType": "VariableDeclaration",
+            "scope": 1994,
+            "src": "309:18:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 1988,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "309:4:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1991,
+            "name": "ethereumChainId",
+            "nodeType": "VariableDeclaration",
+            "scope": 1994,
+            "src": "334:28:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 1990,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "334:5:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1993,
+            "name": "auctionityChainId",
+            "nodeType": "VariableDeclaration",
+            "scope": 1994,
+            "src": "368:30:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 1992,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "368:5:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1995,
+        "src": "25:376:9"
+      }
+    ],
+    "src": "0:402:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.4+commit.9549d8ff.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.2",
+  "updatedAt": "2019-09-20T07:24:53.344Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
